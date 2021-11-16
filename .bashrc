@@ -192,3 +192,5 @@ export TERM=xterm-256color
 alias config='/usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree=/home/daniel'
 alias config='usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree/home/daniel'
 alias config='/usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree=/home/daniel'
+
+# exec fish

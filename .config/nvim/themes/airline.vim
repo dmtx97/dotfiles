@@ -32,5 +32,5 @@ let g:airline_section_warning = ''
 let g:airline_section_error = ''
 
 set showtabline=2
-let g:airline_theme = 'base16'
+let g:airline_theme = 'hybrid'
 

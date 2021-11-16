@@ -5,4 +5,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 		Plug 'sts10/vim-pink-moon'
 		Plug 'vim-airline/vim-airline'
 		Plug 'vim-airline/vim-airline-themes'
+		Plug 'wadackel/vim-dogrun'
 call plug#end()
