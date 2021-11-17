@@ -6,4 +6,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 		Plug 'scrooloose/NERDTree'
 		Plug 'vim-airline/vim-airline'
 		Plug 'vim-airline/vim-airline-themes'
+		Plug 'https://github.com/ryanoasis/vim-devicons'
+		Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+		Plug 'junegunn/fzf.vim'
 call plug#end()
