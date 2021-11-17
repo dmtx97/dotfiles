@@ -7,8 +7,8 @@ nmap <F6> :NERDTreeToggle %<CR>
 
 let mapleader=","
 
-
 syntax enable
+set cursorline
 set showmatch
 set number
 set mouse=a
@@ -17,10 +17,11 @@ set tabstop=4
 set softtabstop=4
 set clipboard=unnamedplus
 set matchtime=0
-colorscheme dogrun 
 set background=dark
+set termguicolors
 set t_Co=256
-set cursorline
-highlight CursorLine ctermbg=black
+
+colorscheme challenger_deep 
+
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
