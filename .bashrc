@@ -189,8 +189,8 @@ export TERM=xterm-256color
 # alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 # alias pacdiff=_Pacdiff
 ################################################################################
-alias config='/usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree=/home/daniel'
-alias config='usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree/home/daniel'
-alias config='/usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree=/home/daniel'
+# alias config='/usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree=/home/daniel'
+# alias config='usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree/home/daniel'
+# alias config='/usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree=/home/daniel'
 
-# exec fish
+exec fish
