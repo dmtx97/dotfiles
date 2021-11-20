@@ -13,7 +13,7 @@ set sidescroll=0
 set clipboard=unnamedplus
 set matchtime=0
 set encoding=utf-8
-set splitbelow
+set hidden
 
 " Colors
 set background=dark
@@ -23,9 +23,22 @@ colorscheme challenger_deep
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
+
+" next in buffer list
+nnoremap gn :bn<CR> 
+" previous in buffer list
+nnoremap gp :bp<CR>
+" close buffer
+nnoremap gd :bd!<CR>
+
 " Easy tab switching"
 nnoremap <A-Left> :tabprevious<CR>
 nnoremap <A-Right> :tabnext<CR>
+
+" Terminal
+nnoremap <silent> <leader>t :term<CR>
+tnoremap <C-d> <C-\><C-n>:bd!<CR>
+autocmd TermOpen * startinsert
 
 " NERDTree Mappings
 nnoremap <F1> :NERDTreeToggle %<CR>
