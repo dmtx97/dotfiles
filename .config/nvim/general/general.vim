@@ -23,17 +23,26 @@ colorscheme challenger_deep
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 " next in buffer list
-nnoremap gn :bn<CR> 
+nnoremap tn :bn<CR> 
 " previous in buffer list
-nnoremap gp :bp<CR>
+nnoremap tp :bp<CR>
 " close buffer
-nnoremap gd :bd!<CR>
+nnoremap td :bd!<CR>
 
 " Easy tab switching"
 nnoremap <A-Left> :tabprevious<CR>
 nnoremap <A-Right> :tabnext<CR>
+
+" Searching
+nnoremap <leader>s :execute '/\V' . escape(input('/'), '\\/')<CR>
+
 
 " Terminal
 nnoremap <silent> <leader>t :term<CR>

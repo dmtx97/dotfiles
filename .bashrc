@@ -193,4 +193,8 @@ export TERM=xterm-256color
 # alias config='usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree/home/daniel'
 # alias config='/usr/bin/git --git-dir=/home/daniel/.cfg/ --work-tree=/home/daniel'
 
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
 exec fish
