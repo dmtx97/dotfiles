@@ -73,3 +73,16 @@ function FilesOpen()
 	:Files
   endif
 endfunction
+
+
+" let g:deoplete#enable_at_startup = 1
+
+" call deoplete#custom#var('omni', 'input_patterns', {
+"       \ 'tex': g:vimtex#re#deoplete
+      \})
+
+set completeopt-=preview
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+
