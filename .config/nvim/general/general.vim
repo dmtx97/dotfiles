@@ -29,20 +29,20 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
+imap <C-c> <Esc>
 " next in buffer list
 nnoremap tn :bn<CR> 
 " previous in buffer list
 nnoremap tp :bp<CR>
 " close buffer
 nnoremap td :bd!<CR>
-
+let ftplugin_sql_omni_key = '<C-j>'
 " Easy tab switching"
 nnoremap <A-Left> :tabprevious<CR>
 nnoremap <A-Right> :tabnext<CR>
 
 " Searching
 nnoremap <leader>s :execute '/\V' . escape(input('/'), '\\/')<CR>
-
 
 " Terminal
 nnoremap <silent> <leader>t :term<CR>
@@ -74,12 +74,11 @@ function FilesOpen()
   endif
 endfunction
 
-
 " let g:deoplete#enable_at_startup = 1
 
 " call deoplete#custom#var('omni', 'input_patterns', {
 "       \ 'tex': g:vimtex#re#deoplete
-      \})
+"       \})
 
 set completeopt-=preview
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
