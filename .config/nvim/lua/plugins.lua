@@ -33,9 +33,10 @@ packer.init {
 -- Packer plugins
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-	use { 'junegunn/vim-easy-align' }
 	use 'nvim-telescope/telescope.nvim'
+	use { 'junegunn/vim-easy-align' }
 	use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, tag = 'nightly', config = "require('plugins.tree')" }
+	use { 'kdheepak/lazygit.nvim'  }
   if packer_bootstrap then
     require('packer').sync()
   end

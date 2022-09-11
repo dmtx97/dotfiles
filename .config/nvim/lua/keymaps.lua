@@ -17,3 +17,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Easyalign
 keymap("n", "ga", "<Plug>(EasyAlign)", silent)
 keymap("x", "ga", "<Plug>(EasyAlign)", silent)
+
+-- Lazygit
+keymap("n", "<leader>gg", ":LazyGit<CR>", silent)
