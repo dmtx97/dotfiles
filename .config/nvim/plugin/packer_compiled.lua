@@ -79,6 +79,12 @@ _G.packer_plugins = {
     path = "/home/daniel/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
+  ["lualine.nvim"] = {
+    config = { "require('plugins.lualine')" },
+    loaded = true,
+    path = "/home/daniel/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["nvim-tree.lua"] = {
     config = { "require('plugins.tree')" },
     loaded = true,
@@ -100,6 +106,11 @@ _G.packer_plugins = {
     path = "/home/daniel/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  vim = {
+    loaded = true,
+    path = "/home/daniel/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/challenger-deep-theme/vim"
+  },
   ["vim-easy-align"] = {
     loaded = true,
     path = "/home/daniel/.local/share/nvim/site/pack/packer/start/vim-easy-align",
@@ -112,6 +123,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-tree.lua]], true)
 require('plugins.tree')
 time([[Config for nvim-tree.lua]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('plugins.lualine')
+time([[Config for lualine.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
