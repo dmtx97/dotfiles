@@ -1,0 +1,39 @@
+colors:
+  primary:
+    background: "0x1E1C31"
+    foreground: "0xe1e3e4"
+
+  normal:
+    black:      "0x181a1c"
+    red:        "0xfb617e"
+    green:      "0x9ed06c"
+    yellow:     "0xedc763"
+    blue:       "0x6dcae8"
+    magenta:    "0xbb97ee"
+    cyan:       "0xf89860"
+    white:      "0xe1e3e4"
+
+  bright:
+    black:      "0x181a1c"
+    red:        "0xfb617e"
+    green:      "0x9ed06c"
+    yellow:     "0xedc763"
+    blue:       "0x6dcae8"
+    magenta:    "0xbb97ee"
+    cyan:       "0xf89860"
+    white:      "0xe1e3e4"
+
+  font:
+    normal:
+      family: "Hack"
+      style: Regular
+    bold:
+      family: "Hack"
+      style: Bold
+    italic:
+      family: "Hack"
+      style: Bold Italicy
+
+key_bindings:
+  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+
