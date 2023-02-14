@@ -18,5 +18,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "ga", "<Plug>(EasyAlign)", silent)
 keymap("x", "ga", "<Plug>(EasyAlign)", silent)
 
+-- Move between tabs
+keymap("n", "<C-Left>", ":tabprevious<CR>", opts)
+keymap("n", "<C-Right>", ":tabnext<CR>", opts)
+
 -- Lazygit
 keymap("n", "<leader>gg", ":LazyGit<CR>", silent)

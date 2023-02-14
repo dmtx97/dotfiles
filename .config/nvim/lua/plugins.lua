@@ -33,13 +33,14 @@ packer.init {
 -- Packer plugins
 return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
-	use { 'neoclide/coc.nvim', branch = 'release' }
-	use 'neovim/nvim-lspconfig'
+	-- use { 'neoclide/coc.nvim', branch = 'release' }
+	-- use 'neovim/nvim-lspconfig'
 	use 'junegunn/vim-easy-align'
 	use 'challenger-deep-theme/vim'
 	use 'kdheepak/lazygit.nvim'
 	use 'junegunn/fzf.vim' 
 	use 'junegunn/fzf' 
+	use 'lervag/vimtex' 
 	use { "windwp/nvim-autopairs", config = "require('nvim-autopairs').setup()" }
 	use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, tag = 'nightly', config = "require('plugins.tree')" }
 	use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, config = "require('plugins.lualine')" }
