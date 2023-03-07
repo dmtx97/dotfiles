@@ -24,3 +24,7 @@ keymap("n", "<C-Right>", ":tabnext<CR>", opts)
 
 -- Lazygit
 keymap("n", "<leader>gg", ":LazyGit<CR>", silent)
+
+-- Center screen when going up/down page
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)

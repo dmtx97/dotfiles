@@ -35,9 +35,9 @@ font pango:monospace 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# exec --no-startup-id feh --bg-scale --randomize --no-xinerama ~/Pictures/Wallpapers/*
 # feh random wallpaper upon startup
-exec --no-startup-id feh --bg-fill --randomize ~/Pictures/Wallpapers/*
-
+exec --no-startup-id shuf -e -n1 ~/Pictures/Wallpapers/* | xargs feh --bg-scale
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
