@@ -1,5 +1,7 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
+local builtin = require('telescope.builtin')
+
 
 -- Window Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -29,6 +31,8 @@ keymap("n", "<leader>gg", ":LazyGit<CR>", silent)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 
-keymap("c", "<C-j>", "<C-n>", silent)
-keymap("c", "<C-k>", "<C-p>", silent)
-
+-- Telescope
+keymap('n', '<leader>ff', builtin.find_files, opts)
+keymap('n', '<leader>fg', builtin.live_grep, opts)
+keymap('n', '<leader>fb', builtin.buffers, opts)
+keymap('n', '<leader>fh', builtin.help_tags, opt)
