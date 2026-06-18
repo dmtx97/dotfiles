@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/daniel/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/home/daniel/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/home/daniel/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/home/daniel/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/daniel/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
+local package_path_str = "/home/daniel/.cache/nvim/packer_hererocks/2.1.1780076327/share/lua/5.1/?.lua;/home/daniel/.cache/nvim/packer_hererocks/2.1.1780076327/share/lua/5.1/?/init.lua;/home/daniel/.cache/nvim/packer_hererocks/2.1.1780076327/lib/luarocks/rocks-5.1/?.lua;/home/daniel/.cache/nvim/packer_hererocks/2.1.1780076327/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/daniel/.cache/nvim/packer_hererocks/2.1.1780076327/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -121,11 +121,10 @@ _G.packer_plugins = {
     path = "/home/daniel/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["nvim-autopairs"] = {
-    config = { "require('nvim-autopairs').setup()" },
+  ["mason.nvim"] = {
     loaded = true,
-    path = "/home/daniel/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
+    path = "/home/daniel/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/mason-org/mason.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -168,6 +167,11 @@ _G.packer_plugins = {
     path = "/home/daniel/.local/share/nvim/site/pack/packer/start/vim-easy-align",
     url = "https://github.com/junegunn/vim-easy-align"
   },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/daniel/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
+  },
   vimtex = {
     loaded = true,
     path = "/home/daniel/.local/share/nvim/site/pack/packer/start/vimtex",
@@ -180,10 +184,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for Comment.nvim]], true)
 require('Comment').setup()
 time([[Config for Comment.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require('nvim-autopairs').setup()
-time([[Config for nvim-autopairs]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 require('plugins.lualine')

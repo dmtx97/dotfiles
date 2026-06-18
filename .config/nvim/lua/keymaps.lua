@@ -2,7 +2,6 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 local builtin = require('telescope.builtin')
 
-
 -- Window Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -17,15 +16,15 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Easyalign
-keymap("n", "ga", "<Plug>(EasyAlign)", silent)
-keymap("x", "ga", "<Plug>(EasyAlign)", silent)
+keymap("n", "ga", "<Plug>(EasyAlign)", opts)
+keymap("x", "ga", "<Plug>(EasyAlign)", opts)
 
 -- Move between tabs
 keymap("n", "<C-Left>", ":tabprevious<CR>", opts)
 keymap("n", "<C-Right>", ":tabnext<CR>", opts)
 
 -- Lazygit
-keymap("n", "<leader>gg", ":LazyGit<CR>", silent)
+keymap("n", "<leader>gg", ":LazyGit<CR>", opts)
 
 -- Center screen when going up/down page
 keymap("n", "<C-d>", "<C-d>zz", opts)
@@ -35,4 +34,9 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap('n', '<leader>ff', builtin.find_files, opts)
 keymap('n', '<leader>fg', builtin.live_grep, opts)
 keymap('n', '<leader>fb', builtin.buffers, opts)
-keymap('n', '<leader>fh', builtin.help_tags, opt)
+keymap('n', '<leader>fh', builtin.help_tags, opts)
+
+-- Show Diagnostics
+keymap('n', '<leader>cd', vim.diagnostic.open_float, opts) -- Line Diagnostics
+-- keymap('n', ']d', vim.diagnostic.open_float, opts) -- Line Diagnostics
+

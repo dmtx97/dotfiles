@@ -1,7 +1,7 @@
 require('lualine').setup({
 	options = { 
-		theme = 'challenger_deep', 
-		section_separators = "",
-		component_separators = ""
+	theme = 'challenger_deep', 
+    section_separators = { left = '', right = ''},
+    component_separators = { left = '', right = ''},
 	}
 })

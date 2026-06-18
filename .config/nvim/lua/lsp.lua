@@ -1,31 +1,39 @@
-local nvim_lsp = require'lspconfig'
-local cmp = require("cmp")
+-- Golang
+vim.lsp.enable('gopls')
 
-local on_attach = function(client, buffer)
-    require'completion'.on_attach(client)
-end
 
-nvim_lsp.rust_analyzer.setup({
-    on_attach=on_attach,
-    settings = {
-        ["rust-analyzer"] = {
-            imports = {
-                granularity = {
-                    group = "module",
+vim.lsp.config("roslyn", {
+	cmd = {
+		"roslyn-language-server",
+		"--stdio",
+	}
+})
+
+
+vim.lsp.enable('roslyn')
+
+-- Lua
+vim.lsp.config(
+    'lua_ls',
+    {
+        settings = {
+            Lua = {
+                diagnostics = {globals = {"vim", "require"},},
+                runtime = {
+                    version = "LuaJIT",
                 },
-                prefix = "self",
-            },
-            cargo = {
-                buildScripts = {
-                    enable = true,
+                telemetry = {enable = false,},
+                workspace = {
+                    library = {vim.env.VIMRUNTIME,},
                 },
-            },
-            procMacro = {
-                enable = true
             },
         }
     }
-})
+)
+
+vim.lsp.enable('lua_ls')
+
+local cmp = require("cmp")
 
 cmp.setup({
 	preselect = cmp.PreselectMode.None,
@@ -35,14 +43,14 @@ cmp.setup({
 		end,
 	},
 
-	mapping = cmp.mapping.preset.insert({ 
+	mapping = cmp.mapping.preset.insert({
 		['<C-b>'] = cmp.mapping.scroll_docs(-4),
 		['<C-f>'] = cmp.mapping.scroll_docs(4),
 		['<C-p>'] = cmp.mapping.select_prev_item(),
 		['<C-n>'] = cmp.mapping.select_next_item(),
 		['<C-e>'] = cmp.mapping.close(),
 		['<Shift-Space>'] = cmp.mapping.complete(),
-		['<CR>'] = cmp.mapping.confirm { select = true } 
+		['<CR>'] = cmp.mapping.confirm { select = true }
 	}),
 
 	-- Installed sources

@@ -1,5 +1,6 @@
 vim.opt.shortmess:append "c"
 vim.cmd('colorscheme challenger_deep')
+vim.diagnostic.open_float()
 
 local options = {
 	number         = true,

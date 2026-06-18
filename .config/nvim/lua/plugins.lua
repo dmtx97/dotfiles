@@ -1,6 +1,5 @@
-local fn = vim.fn
-
 local ensure_packer = function()
+	local fn = vim.fn
 	local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 	if fn.empty(fn.glob(install_path)) > 0 then
 		fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
@@ -22,6 +21,7 @@ vim.cmd([[
 
 local packer = require("packer")
 
+
 packer.init {
 	display = {
 		open_fn = function()
@@ -30,29 +30,35 @@ packer.init {
 	},
 }
 
+require("mason").setup({
+    registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+    },
+})
+
 -- Packer plugins
 return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
-	-- use { 'neoclide/coc.nvim', branch = 'release' }
-	-- use 'neovim/nvim-lspconfig'
 	use 'junegunn/vim-easy-align'
 	use 'challenger-deep-theme/vim'
 	use 'kdheepak/lazygit.nvim'
-	use 'junegunn/fzf.vim' 
-	use 'junegunn/fzf' 
-	use 'lervag/vimtex' 
-	use { "windwp/nvim-autopairs", config = "require('nvim-autopairs').setup()" }
-	-- use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, tag = 'nightly', config = "require('plugins.tree')" }
+	use 'junegunn/fzf.vim'
+	use 'junegunn/fzf'
+	use 'lervag/vimtex'
+	-- use { "windwp/nvim-autopairs", config = "require('nvim-autopairs').setup()" }
 	use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, config = "require('plugins.lualine')" }
 	use { 'numToStr/Comment.nvim', config = "require('Comment').setup()" }
 	use 'neovim/nvim-lspconfig'
+	use 'mason-org/mason.nvim'
 	-- Autocompletion framework
-	use("hrsh7th/nvim-cmp")
+	use 'hrsh7th/nvim-cmp'
 	use({
 	  -- cmp LSP completion
 	  "hrsh7th/cmp-nvim-lsp",
 	  -- cmp Snippet completion
 	  "hrsh7th/cmp-vsnip",
+	  "hrsh7th/vim-vsnip",
 	  -- cmp Path completion
 	  "hrsh7th/cmp-path",
 	  "hrsh7th/cmp-buffer",

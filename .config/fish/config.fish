@@ -3,3 +3,9 @@ if status is-interactive
 end
 
 set -gx FZF_CTRL_T_OPTS "--reverse --preview 'cat {}'"
+
+pyenv init - fish | source
+
+
+# opencode
+fish_add_path /home/daniel/.opencode/bin

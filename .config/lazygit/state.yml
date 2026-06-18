@@ -1,0 +1,12 @@
+lastupdatecheck: 0
+recentrepos:
+    - /home/daniel/Documents/Repositories/Daniel-Mendez-Resume
+    - /home/daniel/Documents/Repositories/TestProject
+    - /home/daniel/Documents/Repositories/AlgoTrading
+startuppopupversion: 5
+didshowhunkstaginghint: false
+lastversion: 0.61.1
+customcommandshistory:
+    - git commit --amend --no-edit
+hidecommandlog: false
+githubPullRequests: {}
